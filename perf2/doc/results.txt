@@ -1,0 +1,41 @@
+Benchmark               Mode  Cnt     Score      Error  Units
+
+Elastic.useCase1       thrpt   10  3472,829 ±  288,214  ops/s
+Elastic.useCase2       thrpt   10  2003,163 ±  168,628  ops/s
+Elastic.useCase3       thrpt   10  4816,629 ±  393,045  ops/s
+Elastic.useCase4       thrpt   10  4684,816 ±  532,521  ops/s
+Elastic.useCase5       thrpt   10  4532,423 ±  376,558  ops/s
+Elastic.useCase6       thrpt   10  4545,349 ±  422,300  ops/s
+Elastic.useCase7       thrpt   10  4278,530 ±  318,986  ops/s
+
+Elastic.write          thrpt   10  3904,627 ±  322,106  ops/s
+
+ElasticWrite.useCase1  thrpt   10  2305,955 ±  207,272  ops/s
+ElasticWrite.useCase2  thrpt   10  1645,490 ±  300,579  ops/s
+ElasticWrite.useCase3  thrpt   10  4094,806 ±  503,319  ops/s
+ElasticWrite.useCase4  thrpt   10  4105,935 ±  380,092  ops/s
+ElasticWrite.useCase5  thrpt   10  3913,387 ±  387,617  ops/s
+ElasticWrite.useCase6  thrpt   10  3884,841 ±  344,238  ops/s
+ElasticWrite.useCase7  thrpt   10  3883,977 ±  277,954  ops/s
+
+ElasticWrite.write     thrpt   10  3873,111 ±  640,094  ops/s
+
+Solr.useCase1          thrpt   10  2959,080 ±  807,057  ops/s
+Solr.useCase2          thrpt   10   777,075 ±   80,049  ops/s
+Solr.useCase3          thrpt   10  3188,598 ±  868,369  ops/s
+Solr.useCase4          thrpt   10  3223,739 ±  583,257  ops/s
+Solr.useCase5          thrpt   10  3142,925 ±  738,503  ops/s
+Solr.useCase6          thrpt   10  2994,512 ±  880,057  ops/s
+Solr.useCase7          thrpt   10  2798,052 ±  810,976  ops/s
+
+Solr.write             thrpt   10  4169,900 ± 1765,355  ops/s
+
+SolrWrite.useCase1     thrpt   10  2956,422 ±  692,613  ops/s
+SolrWrite.useCase2     thrpt   10   809,587 ±  103,667  ops/s
+SolrWrite.useCase3     thrpt   10  2980,039 ±  804,844  ops/s
+SolrWrite.useCase4     thrpt   10  3041,399 ±  991,555  ops/s
+SolrWrite.useCase5     thrpt   10  2690,326 ± 1000,243  ops/s
+SolrWrite.useCase6     thrpt   10  2859,969 ±  863,070  ops/s
+SolrWrite.useCase7     thrpt   10  2933,558 ±  891,889  ops/s
+
+SolrWrite.write        thrpt   10  3931,633 ± 1884,816  ops/s

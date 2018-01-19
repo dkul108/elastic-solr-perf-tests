@@ -1,0 +1,61 @@
+plugins {
+    id "net.foragerr.jmeter" version "1.0.10-3.3"
+}
+
+group 'jmperf'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'net.foragerr.jmeter'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations.all {
+    resolutionStrategy {
+        force "joda-time:joda-time:2.2"
+        force "com.google.guava:guava:19.0"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.elasticsearch.client:transport:5.6.4'
+    compile 'io.vavr:vavr:0.9.1'
+    compile 'org.apache.solr:solr-solrj:7.1.0'
+    compile group: 'org.apache.jmeter', name: 'ApacheJMeter_core', version: '3.3'
+    compile group: 'org.apache.jmeter', name: 'ApacheJMeter_java', version: '3.3'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+}
+
+jar {
+    manifest {
+        attributes(
+                "Class-Path": configurations.runtime.files.collect{it.toURI().toString()}.join(' ')
+        )
+    }
+}
+
+
+jmeter {
+    maxHeapSize = '10g'
+    //jmSystemProperties = ["-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005"]
+}
+
+task copyTestsArchiveToJmeterLib(type: Copy) {
+    from jar.archivePath
+    into "build/jmeter/lib/ext"
+}
+
+task copyLogJ4Xml(type:Copy) {
+    from "src/main/resources/log4j2.xml"
+    into "build/jmeter/bin"
+}
+
+jmGui.dependsOn copyTestsArchiveToJmeterLib
+jmRun.dependsOn copyTestsArchiveToJmeterLib
+jmRun.dependsOn copyLogJ4Xml
+

@@ -1,0 +1,39 @@
+group 'perf'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName = "perf.Perf"
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.elasticsearch.client:transport:5.6.4'
+    compile 'io.vavr:vavr:0.9.1'
+    compile 'org.openjdk.jmh:jmh-core:1.19'
+    compile 'org.openjdk.jmh:jmh-generator-annprocess:1.19'
+    compile 'org.apache.logging.log4j:log4j-core:2.9.1'
+    compile 'org.apache.solr:solr-solrj:7.1.0'
+    compile 'org.slf4j:slf4j-simple:1.7.25'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    // https://mvnrepository.com/artifact/javax.validation/validation-api
+    compile group: 'javax.validation', name: 'validation-api', version: '2.0.0.Final'
+
+}
+
+test {
+  systemProperty 'perf.es.host', 'ec2-18-216-156-123.us-east-2.compute.amazonaws.com'
+  systemProperty 'perf.solr.url', 'http://ec2-18-216-73-149.us-east-2.compute.amazonaws.com:8983/solr'
+}
+
+applicationDefaultJvmArgs = [
+  "-Dperf.es.host=ec2-18-216-156-123.us-east-2.compute.amazonaws.com",
+  "-Dperf.solr.url=http://ec2-18-216-73-149.us-east-2.compute.amazonaws.com:8983/solr"
+]

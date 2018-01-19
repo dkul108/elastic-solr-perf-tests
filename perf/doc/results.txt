@@ -1,0 +1,15 @@
+Benchmark          Mode  Cnt     Score     Error  Units
+Elastic.useCase1  thrpt   10  5602.826 ± 433.141  ops/s
+Elastic.useCase2  thrpt   10  5721.466 ± 413.437  ops/s
+Elastic.useCase3  thrpt   10  6118.128 ± 390.582  ops/s
+Elastic.useCase4  thrpt   10  6009.960 ± 550.191  ops/s
+Elastic.useCase5  thrpt   10  5815.722 ± 335.696  ops/s
+Elastic.useCase6  thrpt   10  5799.389 ± 396.359  ops/s
+Elastic.useCase7  thrpt   10  5881.929 ± 434.751  ops/s
+Solr.useCase1     thrpt   10  4617.824 ± 172.071  ops/s
+Solr.useCase2     thrpt   10  1198.280 ±  94.961  ops/s
+Solr.useCase3     thrpt   10  6035.066 ± 264.848  ops/s
+Solr.useCase4     thrpt   10  5475.609 ± 212.384  ops/s
+Solr.useCase5     thrpt   10  5464.784 ± 185.434  ops/s
+Solr.useCase6     thrpt   10  5430.019 ± 190.708  ops/s
+Solr.useCase7     thrpt   10  5316.513 ± 230.235  ops/s

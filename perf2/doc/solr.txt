@@ -1,0 +1,27 @@
+useCase1
+q=*:*&fq=channelId:CHAN_413+OR+channelId:CHAN_259&fq=start:[1509538500000+TO+*]&fq=end:[*+TO+1509624900000]&sort=start+asc
+[Returns 43 documents]
+
+useCase2
+q=*:*&fq=channelId:CHAN_427+OR+channelId:CHAN_303&fq=start:[1509952500000+TO+*]&sort=start+asc&rows=61
+[Returns 447 documents]
+
+useCase3
+q=*:*&fq=content.category:Series&fq=start:[*+TO+1509650100000]&fq=end:[1509650100000+TO+*]&sort=channelId+asc
+[Returns 115 documents]
+
+useCase4
+q=*:*&fq=channelId:CHAN_210&fq=start:[1509279300000+TO+*]&fq=end:[*+TO+1510748100000]
+[Returns 334 documents]
+
+useCase5
+q=*:*&fq=channelId:CHAN_353&fq=start:[1509279300000+TO+*]&fq=end:[*+TO+1510748100000]&fq=content.packages.name:Europe
+[Returns 103 documents]
+
+useCase6
+q=*:*&fq=channelId:CHAN_328&fq=start:[1509279300000+TO+*]&fq=end:[*+TO+1510748100000]&fq=content.packages.countries:ru
+[Returns 113 documents]
+
+useCase7
+q=*:*&fq=channelId:CHAN_354&fq=start:[1509279300000+TO+*]&fq=end:[*+TO+1510748100000]&fq=content.packages.contract.concurrency:2
+[Returns 121 documents]

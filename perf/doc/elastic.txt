@@ -1,0 +1,458 @@
+useCase1:
+{
+  "query" : {
+    "constant_score" : {
+      "filter" : {
+        "bool" : {
+          "filter" : [
+            {
+              "terms" : {
+                "channelId.keyword" : [
+                  "CHAN_132",
+                  "CHAN_137"
+                ],
+                "boost" : 1.0
+              }
+            },
+            {
+              "range" : {
+                "start" : {
+                  "from" : 1509538500000,
+                  "to" : null,
+                  "include_lower" : false,
+                  "include_upper" : true,
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "range" : {
+                "end" : {
+                  "from" : null,
+                  "to" : 1509624900000,
+                  "include_lower" : true,
+                  "include_upper" : false,
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      "boost" : 1.0
+    }
+  },
+  "sort" : [
+    {
+      "start" : {
+        "order" : "asc"
+      }
+    }
+  ]
+}
+
+
+useCase2:
+{
+  "query" : {
+    "constant_score" : {
+      "filter" : {
+        "bool" : {
+          "filter" : [
+            {
+              "terms" : {
+                "channelId.keyword" : [
+                  "CHAN_31",
+                  "CHAN_300"
+                ],
+                "boost" : 1.0
+              }
+            },
+            {
+              "range" : {
+                "start" : {
+                  "from" : 1509538500000,
+                  "to" : null,
+                  "include_lower" : false,
+                  "include_upper" : true,
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "range" : {
+                "end" : {
+                  "from" : null,
+                  "to" : 1509624900000,
+                  "include_lower" : true,
+                  "include_upper" : false,
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      "boost" : 1.0
+    }
+  },
+  "sort" : [
+    {
+      "start" : {
+        "order" : "asc"
+      }
+    }
+  ]
+}
+
+
+useCase3:
+{
+  "query" : {
+    "constant_score" : {
+      "filter" : {
+        "bool" : {
+          "filter" : [
+            {
+              "range" : {
+                "start" : {
+                  "from" : null,
+                  "to" : 1509610500000,
+                  "include_lower" : true,
+                  "include_upper" : false,
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "range" : {
+                "end" : {
+                  "from" : 1509610500000,
+                  "to" : null,
+                  "include_lower" : false,
+                  "include_upper" : true,
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "terms" : {
+                "content.category.keyword" : [
+                  "Series"
+                ],
+                "boost" : 1.0
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      "boost" : 1.0
+    }
+  },
+  "sort" : [
+    {
+      "channelId.keyword" : {
+        "order" : "asc"
+      }
+    }
+  ]
+}
+
+
+useCase4:
+{
+  "query" : {
+    "constant_score" : {
+      "filter" : {
+        "bool" : {
+          "filter" : [
+            {
+              "terms" : {
+                "channelId.keyword" : [
+                  "CHAN_185"
+                ],
+                "boost" : 1.0
+              }
+            },
+            {
+              "range" : {
+                "start" : {
+                  "from" : 1509279300000,
+                  "to" : null,
+                  "include_lower" : false,
+                  "include_upper" : true,
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "range" : {
+                "end" : {
+                  "from" : null,
+                  "to" : 1510748100000,
+                  "include_lower" : true,
+                  "include_upper" : false,
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      "boost" : 1.0
+    }
+  },
+  "sort" : [
+    {
+      "start" : {
+        "order" : "asc"
+      }
+    }
+  ]
+}
+
+
+useCase5:
+{
+  "query" : {
+    "constant_score" : {
+      "filter" : {
+        "bool" : {
+          "filter" : [
+            {
+              "constant_score" : {
+                "filter" : {
+                  "bool" : {
+                    "filter" : [
+                      {
+                        "terms" : {
+                          "channelId.keyword" : [
+                            "CHAN_274"
+                          ],
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "range" : {
+                          "start" : {
+                            "from" : 1509279300000,
+                            "to" : null,
+                            "include_lower" : false,
+                            "include_upper" : true,
+                            "boost" : 1.0
+                          }
+                        }
+                      },
+                      {
+                        "range" : {
+                          "end" : {
+                            "from" : null,
+                            "to" : 1510748100000,
+                            "include_lower" : true,
+                            "include_upper" : false,
+                            "boost" : 1.0
+                          }
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                },
+                "boost" : 1.0
+              }
+            },
+            {
+              "terms" : {
+                "content.packages.name.keyword" : [
+                  "Europe"
+                ],
+                "boost" : 1.0
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      "boost" : 1.0
+    }
+  },
+  "sort" : [
+    {
+      "start" : {
+        "order" : "asc"
+      }
+    }
+  ]
+}
+
+
+useCase6:
+{
+  "query" : {
+    "constant_score" : {
+      "filter" : {
+        "bool" : {
+          "filter" : [
+            {
+              "constant_score" : {
+                "filter" : {
+                  "bool" : {
+                    "filter" : [
+                      {
+                        "terms" : {
+                          "channelId.keyword" : [
+                            "CHAN_95"
+                          ],
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "range" : {
+                          "start" : {
+                            "from" : 1509279300000,
+                            "to" : null,
+                            "include_lower" : false,
+                            "include_upper" : true,
+                            "boost" : 1.0
+                          }
+                        }
+                      },
+                      {
+                        "range" : {
+                          "end" : {
+                            "from" : null,
+                            "to" : 1510748100000,
+                            "include_lower" : true,
+                            "include_upper" : false,
+                            "boost" : 1.0
+                          }
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                },
+                "boost" : 1.0
+              }
+            },
+            {
+              "terms" : {
+                "content.packages.countries.keyword" : [
+                  "ru"
+                ],
+                "boost" : 1.0
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      "boost" : 1.0
+    }
+  },
+  "sort" : [
+    {
+      "start" : {
+        "order" : "asc"
+      }
+    }
+  ]
+}
+
+
+useCase7:
+{
+  "query" : {
+    "constant_score" : {
+      "filter" : {
+        "bool" : {
+          "filter" : [
+            {
+              "constant_score" : {
+                "filter" : {
+                  "bool" : {
+                    "filter" : [
+                      {
+                        "terms" : {
+                          "channelId.keyword" : [
+                            "CHAN_329"
+                          ],
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "range" : {
+                          "start" : {
+                            "from" : 1509279300000,
+                            "to" : null,
+                            "include_lower" : false,
+                            "include_upper" : true,
+                            "boost" : 1.0
+                          }
+                        }
+                      },
+                      {
+                        "range" : {
+                          "end" : {
+                            "from" : null,
+                            "to" : 1510748100000,
+                            "include_lower" : true,
+                            "include_upper" : false,
+                            "boost" : 1.0
+                          }
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                },
+                "boost" : 1.0
+              }
+            },
+            {
+              "term" : {
+                "content.packages.contract.concurrency" : {
+                  "value" : 2,
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      "boost" : 1.0
+    }
+  },
+  "sort" : [
+    {
+      "start" : {
+        "order" : "asc"
+      }
+    }
+  ]
+}
